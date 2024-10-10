@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking system</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#14161c]">
+
+    <nav class="w-[100vw] h-[15vh] bg-[#252730] flex justify-evenly items-center text-3xl shadow-2xl">
+        <h1 class="font-bold">Banking System Dashboard</h1>
+    </nav>
+
+    <div class="w-[100vw] h-[85vh] flex justify-between items-center flex-col text-xl">
+        <main class="w-[60vw] h-[50vh] flex flex-col justify-evenly mt-16 bg-[#252730] border rounded-xl p-5">
+            <div class="current w-full">
+                <span>Current Balance : </span>
+                <input type="text" class="bg-[#373739] border border-dashed px-2" value="1000" readonly name="currBal" id="currBalance">
+            </div>
+
+            <div class="deposit w-full">
+                <span>Deposit Amount : </span>
+                <input type="number" class="bg-[#373739] border border-dashed px-2 my-1" name="depositAmount" id="depositAmount">
+                <button id="deposit" onclick="amountDeposited()"
+                    class="border-2 md:mx-12 hover:border-[3px] hover:font-bold border-dashed px-2">Deposit
+                </button>
+            </div>
+
+            <div class="withdrawal w-full">
+                <span>Withdrawal Amount : </span>
+                <input type="text" class="bg-[#373739] border border-dashed px-2 my-1" value="" name="withdrawalAmount" id="withdrawalAmount">
+                <button onclick="amountWithdraw()" class="border-2 md:mx-6 hover:border-[3px] hover:font-bold border-dashed px-2">Withdraw</button>
+
+            </div>
+        </main>
+        <footer
+            class="w-full border-t h-[15vh] bottom-0 bg-gray-800 text-white flex flex-col items-center justify-center">
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com" target="_blank" class="hover:text-blue-500">Facebook</a>
+                <a href="https://www.twitter.com" target="_blank"
+                    class="hover:text-blue-400 border-x-2 px-3">Twitter</a>
+                <a href="https://www.instagram.com" target="_blank" class="hover:text-pink-500">Instagram</a>
+            </div>
+            <p class="text-sm mt-2">Contact us: +91 12345 67890 | email@bank.com</p>
+        </footer>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
